@@ -28,16 +28,21 @@ In the code box is a sample for JSON format.
 ```
 
 ###2. Data Source
-All my data is captured form twitter website
+首先是從twitter上申請一個api
 
-and used Elasticesearch and Logstash
+而我將keyword設定 “k” "b"
+
+設定兩個keyword搜尋的資料量也比較多比較快一點
+
+本來輸入較為稀少的英文字
+
+則搜尋的時間就增加很多
 
 ###3. Method
 
 #### Getting Twitter API first
 
 1. 申請Twitter帳號
-2. 到此網址申請API
 3. Get Twitter API
 
 
@@ -82,6 +87,15 @@ Logstash Website
 
 
 #### code 
+
+##### 以下是config的內容 
+下面各個“ ” 則是輸入自己申請到的api
+
+分別將他們個個輸入即可
+
+
+
+
 - consumer_key => " 輸入你申請的key "  
 - consumer_secret => "  "
 - oauth_token => "  "
@@ -96,7 +110,7 @@ input{
 		oauth_token => "  "
 		oauth_token_secret => "  "
 		
-		keywords => [" "]
+		keywords => [" "] // 輸入你要的keyword
 		full_tweet => true
 	}
 
